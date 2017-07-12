@@ -24,13 +24,12 @@ function Add-Path() {
 # Install apps using Chocolatey
 ######################################################
 Write-Host "Installing Chocolatey"
-iex ((new-object net.webclient).DownloadString('http://bit.ly/psChocInstall'))
+iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1')
 Write-Host
 
 Write-Host "Installing applications from Chocolatey"
 cinst sublimetext3 -y
 cinst git -y
-# cinst GoogleChrome -y
 cinst winmerge -y
 cinst visualstudio2017enterprise -y
 cinst resharper-platform -y
@@ -46,7 +45,6 @@ Write-Host
 ######################################################
 Write-Host "Setting home variable"
 [Environment]::SetEnvironmentVariable("HOME", $HOME, "User")
-[Environment]::SetEnvironmentVariable("CHROME_BIN", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", "User")
 Write-Host
 
 ######################################################
