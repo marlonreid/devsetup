@@ -39,6 +39,7 @@ cinst poshgit -y
 cinst docker-for-windows -y
 cinst docker-kitematic -y
 cinst Evernote -y
+cinst postman -y
 Write-Host
 
 ######################################################
